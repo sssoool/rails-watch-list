@@ -1,4 +1,6 @@
 <h1>HI MARIA</h1>
-<h2><%= @list.name %></h2>
+<% @lists.each do |list| %>
+<li><%= link_to list.name, list_path(list.id) %></li>
+<% end %>
 
 <%= link_to "Create cool list", new_list_path, class: "btn btn-primary" %>
